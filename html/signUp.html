@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../css/singUp.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="loginFrom">
+        <div id="register-form" class="name">
+          <h2>Đăng ký</h2>
+          <h4><a href="">RikkeiFruity.com.vn</a></h4>
+          <br />
+          <label class="labelOne" for="">Username :</label>
+          <i class="fa-solid fa-user"></i>
+          <input type="text" id="userName" placeholder="Type your username " />
+          <br />
+          <hr />
+          <label class="labelOne" for="">Email :</label>
+          <i class="fa-solid fa-user"></i>
+          <input type="email" id="userEmail" placeholder="Type your Email " />  
+          <br />
+          <div class="error" id="email-error"></div>
+          <hr />
+        </div>
+
+        <br />
+        <div class="pass">
+          <label class="labelOne" for="">Password :</label>
+          <!-- <i class="fa-solid fa-lock"></i>    icon pass --> 
+          <input
+            type="password"
+            onchange="validationPass()"
+            id="passUser1"
+            placeholder="Type your pass"
+          />
+          <i
+            id="eyeSlash1"
+            onclick="eyeSlash1()"
+            class="fa-solid fa-eye-slash"
+          ></i>
+          <hr />
+
+          <div class="pass">
+            <label class="labelOne" for=""> Confirm Password :</label>
+            <!-- <i class="fa-solid fa-lock"></i>   icon pass   -->
+            <input
+              type="password"
+              id="passUser2"
+              placeholder="Type your pass"
+              onchange="validationPass()"
+            />
+            <i
+              id="eyeSlash2"
+              onclick="eyeSlash2()"
+              class="fa-solid fa-eye-slash"
+            ></i>
+            <!-- <i class="fa-solid fa-eye"></i> -->
+            <hr />
+            <div id="passWordVali"></div>
+
+            <div class="buttonSlice">
+              <button id="singUpRight" onclick="signUp()" class="buttonPretty">
+                Đăng ký
+              </button>
+            </div>
+            <div class="iconSign">
+              <a href="https://vi-vn.facebook.com/"
+                ><i class="fa-brands fa-facebook icon-social"></i
+              ></a>
+              <a
+                href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoidmkifQ%3D%3D%22%7D"
+                ><i class="fa-brands fa-twitter icon-social"></i
+              ></a>
+              <a
+                href="https://business.instagram.com/getting-started/?locale=vi_VN&content_id=NynnhacPgcYLy73&ref=sem_smb&utm_term=dsa-1878572981228&gclid=Cj0KCQjw8qmhBhClARIsANAtbodHW_rG03rlCbsnN4oL8fCtSSpdgdS3GGI3_EJGfGNYtXXRPD0YP3saAmM1EALw_wcB"
+                ><i class="fa-brands fa-square-instagram icon-social"></i
+              ></a>
+              <div><a href="../html/login.html">Đăng nhập</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="toastMessage"></div>
+      <!-- Toast -->
+    </div>
+
+    <div id="snackbar0">You have successfully registered :v</div>
+    <div id="snackbar1">You have successfully error !</div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="../js/signUp.js"></script>
+  </body>
+</html>

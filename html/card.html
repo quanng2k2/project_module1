@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/cart.css" />
+  </head>
+  <body>
+    <!-- header////////////////////// -->
+    <nav class="navbar navbar-expand-lg navbar-cart">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><img
+            style="width: 60px; height: 30px; border-radius: 10px"
+            src="../image/imageLogo.png"
+            alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="../index.html"
+                ><b>Trang Chủ</b></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><b>Giới thiệu</b></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                ><b>Các loại sản phẩm</b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Trái cây mùa xuân</a></li>
+                <li><a class="dropdown-item" href="#">Trái cây mùa hè</a></li>
+                <li><a class="dropdown-item" href="#">Trái cây mùa thu</a></li>
+                <li><a class="dropdown-item" href="#">Trái cây mùa Đông</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Tính chất dinh dưỡng</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href=" "><b>Liên hệ : 0445543xxx </b></a>
+            </li>
+            <li class="nav-item">
+              <!-- <a class="nav-link" href="../html/signUp.html"><b>Đăng Ký </b></a>   -->
+            </li>
+            <li class="nav-item"> 
+              <!-- <a id="none" class="nav-link" href="../html/login.html"><b>Đăng nhập </b></a>  -->
+            </li> 
+          </ul>
+          <form class="d-flex" role="search">
+            <a id="cartNow" href="./html/card.html"> </a>
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- ///////////////////header -->
+    <div class="text-hr">
+      <h3>Giỏ hàng của tôi :</h3>
+      <hr />
+    </div>
+    <div id="cssCart">
+      <!-- hiển thị khi người dùng mua hàng sẽ render ra --> 
+    </div>
+
+    <div class="sumProduct">
+      <h5 id="sumMoney">
+      </h5> 
+      <button class="clickCart" onclick="addToCart()">Mua hàng</button>     
+    </div>
+    <hr />
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center text-white">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+
+          <!-- Twitter -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="fab fa-twitter"></i
+          ></a>
+
+          <!-- Google -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="fab fa-google"></i
+          ></a>
+
+          <!-- Instagram -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+
+          <!-- Linkedin -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+
+          <!-- Github -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="fab fa-github"></i
+          ></a>
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Form -->
+        <section class="">
+          <form action="">
+            <!--Grid row-->
+            <div class="row d-flex justify-content-center">
+              <!--Grid column-->
+              <div class="col-auto">
+                <p class="pt-2">
+                  <strong>Đăng ký để nhận ưu đãi của REZZAFRUIT</strong>
+                </p>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-md-5 col-12">
+                <!-- Email input -->
+                <div class="form-outline form-white mb-4">
+                  <input
+                    type="email"
+                    id="form5Example21"
+                    class="form-control"
+                  />
+                  <label class="form-label" for="form5Example21"
+                    >Thêm địa chỉ Email...</label
+                  >
+                </div>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-auto">
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-outline-light mb-4"> 
+                  Đăng ký 
+                </button> 
+              </div> 
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </form>
+        </section>
+        <!-- Section: Form -->
+
+        <!-- Section: Text -->
+        <section class="mb-4">
+          <p>
+            Hệ thống trái cây nhập khẩu, đặc biệt trái cây xách tay trực tiếp từ
+            Mỹ, Úc, Nhật, Hàn Quốc, Newzealand, Đài Loan...như Cherry, Nho sữa,
+            giỏ trái cây và đầy đủ các mặt hàng trái cây nhập khẩu đáp ứng mọi
+            yêu cầu khác hàng. Chất lượng chuẩn 100%, giá cả phải chăng Bán hàng
+            chất lượng, uy tín, giá cả hợp lý. <br />
+            Hộ kinh doanh: Trái cây nhập khẩu MST 01B8011843 Do UBND quận Tây Hồ
+            cấp ngày 14/03/2017 Địa chỉ 1: Số Hà Nội Địa chỉ 2: Số 97 Đào Tấn -
+            Ba Đình - Hà Nội Địa chỉ 3: Số 24B7 Phạm Ngọc Thạch - Đống Đa - HN
+            Địa chỉ 4: 20 Yên Lãng - Đống Đa - HN Địa chỉ 5: 20 Tràng Thi- Hàng
+            Trống- Hoàn Kiếm HN Hotline: 0862.593.xxx
+          </p>
+        </section>
+        <!-- Section: Text -->
+
+        <!-- Section: Links -->
+        <section class="">
+          <!--Grid row-->
+          <div class="row"></div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2023 Copyright:
+        <a class="text-white" href="">Fruit.com.vn</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="../js/cart.js"></script>
+  </body>
+</html>

@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-image: url(https://colorlib.com/etc/lf/Login_v4/images/bg-01.jpg); 
+    background-size: cover; 
+} 
+
+h2 {
+    font-size: 40px ;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.loginFrom {
+    padding: 20px;
+    text-align: center;
+    width: 500px ;
+    height: 800px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: floralwhite;
+    border-radius: 20px;
+}
+
+input {
+    height: 30px;
+    border: none;
+    outline: none;
+    width: 90%;
+    padding: 5px;
+    background-color: floralwhite;
+}
+
+.labelOne {
+    display: block;
+    text-align: initial;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.getPass {
+    text-align:right ;
+    padding: 10px;
+}
+
+.buttonPretty {
+    height: 50px;
+    width: 80%;
+    border-radius: 10px;
+    
+}
+
+.buttonSlice {
+    font-size: 30px;
+    padding: 30px;
+}
+
+.sign {
+    padding: 20px;
+}
+
+.icon-social {
+    font-size: 40px;
+    padding: 10px;
+}
+
+.fa-facebook:hover{
+    color: #1877F2;
+    background-color: white;
+    
+}
+
+.fa-twitter:hover{
+    background-color: #1DA1F2;
+    color: white;
+    border-radius: 10px;
+}
+
+.fa-square-instagram:hover{
+    background-color: linear-gradient(45deg, blue, red);
+}
+
+.buttonPretty:hover {
+    background-color: aquamarine;
+    font-weight: 900;
+}
+
+.fa-eye-slash .fa-eye{
+    position: absolute ;
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -190px;
+    background-color: #da1111;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  }
+  
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+
+
+/* @media only screen and (max-width: 768px){ 
+ .
+    
+} */

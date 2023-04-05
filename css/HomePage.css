@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(216, 239, 207); 
+}
+
+.pageTitle {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif; 
+  font-size: 50px;
+  color: rgb(199, 30, 157);
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 25;
+  width: 100%;
+  z-index: 9999;
+  background-color: rgba(250, 241, 247, 0.8);
+}
+
+.d-block {
+  width: 100%;
+  height: 800px;
+} 
+
+.card {
+  flex-wrap: wrap;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+#container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#imageAlcohol {
+  border-radius: 20px;
+}
+
+.hoverImg {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.hoverImg .img {
+  transition:transform 2 ease-in-out ;
+}
+
+.hoverImg:hover img {
+  transition-property: all;
+  transform: scale(1.3); 
+  transition-duration: 1.3s;
+}
+
+.buttonaddProduct {
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
+}
+
+.buttonaddProduct:hover {
+  background-color: rgb(208, 128, 37);
+  color: #fff;
+}
+
+#iconHomeCart {
+  font-size: 40px;
+  margin-left: 10px;
+}
+
+#iconWeb {
+  font-size: 40px ;
+  color: rgb(235, 18, 170);
+}
+
+#snackbar0 { 
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -190px;
+  background-color: #da1111; 
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 90%;
+  border-radius: 20px;
+  bottom: 30px;
+  font-size: 17px;
+} 
+
+#snackbar0.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s; 
+}
+ 
+#snackbar1 { 
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -190px;
+  background-color: #6bec87; 
+  color: #0f0e0e;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1; 
+  left: 80%;
+  border-radius: 10px;
+  bottom: 30px;
+  font-size: 17px;
+} 
+
+#iconHomeCart {
+  color: #d20f0f;
+}
+
+#snackbar1.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
